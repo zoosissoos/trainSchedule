@@ -1,0 +1,19 @@
+body{
+	padding: 25px;
+}
+
+#welcomeText{
+	text-align: center;
+}
+
+#trainForm{
+	margin-top: 50px;
+}
+
+.border{
+	padding: 20px;
+}
+
+td, th{
+	text-align: center;
+}

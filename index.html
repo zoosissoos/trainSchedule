@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Schedule</title>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script
+  		src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">
+  	
+	</script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+</head>
+<body>
+	<div id="wrapper">
+		<div class="jumbotron jumbotron-fluid">
+  			<div class="container">
+    		<h1 class="display-3">Train Junction Function</h1>
+    		<p class="lead" id="welcomeText">Welcome! Please see below for the upcoming schedule.</p>
+  			</div>
+		</div>
+
+	</div>
+	<div id="tableWrapper">
+		<ul class="list-group border rounded">
+  		<li class="list-group-item active">Current Train Schedule</li>
+			<table class="table">
+	  			<thead>
+	    			<tr>
+	      				<th scope="col">Train Name</th>
+	      				<th scope="col">Destination</th>
+	      				<th scope="col">Frequency</th>
+	      				<th scope="col">Next Train Time</th>
+	      				<th scope="col">Minutes Away</th>
+	    			</tr>
+	  			</thead>
+	  			<tbody id="trainTable">
+	  				<!-- train info populates here -->
+	  			</tbody>
+			</table>
+		</ul>
+	</div>
+	
+	<div id="trainForm">
+		<ul class="list-group border rounded">
+			<li class="list-group-item active">Submit a Train</li>
+			<br>
+			<form>
+	  			<div class="form-group">
+	  				<label for="trainName">Train Name:</label>
+	    				<input type="name" class="form-control" id="trainName" aria-describedby="trainName" placeholder="Enter Train name">
+	  			</div>
+	  			<div class="form-group">
+	    			<label for="trainDest">Train Destination:</label>
+	    			<input type="dest" class="form-control" id="trainDest" placeholder="Destination">
+	  			</div>
+	  			<div class="form-group">
+	    			<label for="firstTime">First Time:</label>
+	    			<input type="time" data-date-format="HH:mm" class="form-control" id="firstTime">
+	  			</div>
+	  			<div class="form-group">
+	    			<label for="freq">Frequency:</label>
+	    			<input type="number" class="form-control" id="freq" placeholder="Please use minutes.">
+	  			</div>
+	  			<button type="submit" class="btn btn-primary" id="submitTrain">Submit</button>
+			</form>
+		</ul>
+	</div>
+<script type="text/javascript" src="assets/javascript/javascript.js"></script>		
+</body>
+</html>
